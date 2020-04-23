@@ -25,7 +25,7 @@ const CdImage = (props) => {
         ]}>
             <Text style={styles.text1}>{props.title}</Text>
             <Image
-                source={{ uri: 'http://openweathermap.org/img/wn/10d@2x.png' }}
+                source={{ uri: props.image }}
                 style={styles.image}
                 resizeMode='contain'
             />

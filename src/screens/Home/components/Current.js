@@ -12,13 +12,13 @@ const HmCurrent = (props) => {
     return (
         <View style={styles.container}>
             <Image
-                source={{ uri: 'http://openweathermap.org/img/wn/10d@2x.png' }}
+                source={{ uri: props.image }}
                 style={styles.image}
                 resizeMode='contain'
             />
-            <Text style={styles.text1}>Shah Alam</Text>
-            <Text style={styles.text2}>Sunny</Text>
-            <Text style={styles.text3}>33°</Text>
+            <Text style={styles.text1}>{props.location}</Text>
+            <Text style={styles.text2}>{props.description}</Text>
+            <Text style={styles.text3}>{props.temperature}</Text>
         </View>
     )
 }

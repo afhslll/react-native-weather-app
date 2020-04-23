@@ -6,8 +6,7 @@ import {
 } from 'react-native'
 
 import { CdImage } from '@components/Card'
-
-const dummyData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+import { roundCelsius, momentHourOnly, getWeatherIcon } from '@utils/functions'
 
 const HmHourly = (props) => {
 
@@ -16,9 +15,10 @@ const HmHourly = (props) => {
             <CdImage
                 containerStyle={{ width: 64 }}
                 isFirst={itemData.index == 0}
-                isLast={itemData.index + 1 == dummyData.length}
-                title='1pm'
-                value1='33°'
+                isLast={itemData.index + 1 == props.data.length}
+                title={momentHourOnly(itemData.item.dt)}
+                value1={roundCelsius(itemData.item.temp)}
+                image={getWeatherIcon(itemData.item.weather[0].icon)}
             />
         )
     }
@@ -27,7 +27,7 @@ const HmHourly = (props) => {
         <View style={styles.container}>
             <FlatList
                 keyExtractor={(item, index) => `${index}`}
-                data={dummyData}
+                data={props.data}
                 renderItem={renderRenderItem}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}

@@ -3,12 +3,15 @@ import {
     StyleSheet,
     View,
 } from 'react-native'
+import Moment from 'moment'
 
 import { CdIcon } from '@components/Card'
 import { windowWidth } from '@utils/constants'
+import { moment12Hour } from '@utils/functions'
 
 const HmDetails = (props) => {
     const cardWidth = (windowWidth - 32 - 24) / 4
+    
     return (
         <View style={styles.container}>
             <CdIcon
@@ -16,28 +19,28 @@ const HmDetails = (props) => {
                 iconName='sunrise'
                 iconType='feather'
                 title='Sunrise'
-                value='7:36am'
+                value={moment12Hour(props.sunrise)}
             />
             <CdIcon
                 containerStyle={{ width: cardWidth }}
                 iconName='sunset'
                 iconType='feather'
                 title='Sunset'
-                value='7:00pm'
+                value={moment12Hour(props.sunset)}
             />
             <CdIcon
                 containerStyle={{ width: cardWidth }}
                 iconName='wind'
                 iconType='feather'
                 title='Wind'
-                value='5 mph'
+                value={`${props.wind} m/s`}
             />
             <CdIcon
                 containerStyle={{ width: cardWidth }}
                 iconName='droplet'
                 iconType='feather'
                 title='Humidity'
-                value='60%'
+                value={`${props.humidity}%`}
             />
         </View>
     )
