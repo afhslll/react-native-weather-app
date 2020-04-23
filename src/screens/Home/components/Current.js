@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     },
     text2: {
         fontSize: 20,
-        color: Colors.accent
+        color: Colors.accent,
+        marginTop: 4,
     },
     text3: {
         fontSize: 80,

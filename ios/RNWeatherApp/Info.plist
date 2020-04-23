@@ -37,8 +37,12 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>This app requires location permission to check weather in your current location</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>This app requires location permission to check weather in your current location</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>This app requires location permission to check weather in your current location</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
