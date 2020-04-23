@@ -13,6 +13,8 @@ An example of weather app in React Native.
 
 Location text 'Asia/Kuala_Lumpur' displayed above is based on timezone, OpenWeather API response. You can display exact city or state by passing latitude and longitude to [Google Maps API](https://developers.google.com/maps/gmp-get-started) with your API key.
 
+Generate [debug keystore](https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores) and place it at /android/app.
+
 ## Getting started
 
 In project directory:
